@@ -1,50 +1,67 @@
-import { BuildingIcon, GameIcon, UsersIcon } from "./icons";
-import { Frame } from "./frame";
+import { ChestIcon, CommunityIcon, FEATURE_CARD_IMAGES, RuneFeatureCard, SwordsIcon, TrophyIcon } from "./ui";
 import styles from "./feature-cards-section.module.css";
-import pillars from "./pillars.module.css";
 
-const PILLARS = [
+const FEATURES = [
   {
-    icon: UsersIcon,
-    title: "Players",
-    text: "One shared identity and progression that follows you across the games you play.",
+    image: FEATURE_CARD_IMAGES.playTogether,
+    icon: <SwordsIcon />,
+    title: "Play Together",
+    text: "Connect your games, play with friends and meet new players worldwide.",
   },
   {
-    icon: GameIcon,
-    title: "Games",
-    text: "Existing and new games can connect to Bifrost and become part of the shared universe.",
+    image: FEATURE_CARD_IMAGES.compete,
+    icon: <TrophyIcon />,
+    title: "Compete",
+    text: "Matchmaking, tournaments and events across multiple games.",
   },
   {
-    icon: BuildingIcon,
-    title: "Companies",
-    text: "Access to a shared ecosystem of players and games through the Bifrost platform.",
+    image: FEATURE_CARD_IMAGES.beRewarded,
+    icon: <ChestIcon />,
+    title: "Be Rewarded",
+    text: "Earn, collect and unlock unique rewards across your games.",
+  },
+  {
+    image: FEATURE_CARD_IMAGES.buildCommunity,
+    icon: <CommunityIcon />,
+    title: "Build Community",
+    text: "Join a global community, make friends and be part of something bigger.",
   },
 ];
 
 export function FeatureCardsSection() {
   return (
     <section id="bifrost" className="section">
-      <div className={`${styles.dragon} ${styles.dragonLeft}`} aria-hidden="true" />
-      <div className={`${styles.dragon} ${styles.dragonRight}`} aria-hidden="true" />
+      <img
+        src="/bifrost/svg/dragon-large.svg"
+        alt=""
+        aria-hidden="true"
+        className={`${styles.dragon} ${styles.dragonLeft}`}
+      />
+      <img
+        src="/bifrost/svg/dragon-large.svg"
+        alt=""
+        aria-hidden="true"
+        className={`${styles.dragon} ${styles.dragonRight}`}
+      />
 
       <div className={styles.wrap}>
-        <div className="sectionHead">
-          <p className="eyebrow">Bifrost: The Ecosystem</p>
+        <div className="sectionHead sectionHead--center">
+          <p className="eyebrow" style={{ justifyContent: "center" }}>
+            Bifrost: The Ecosystem
+          </p>
           <h2 className="h2">One Unified Gaming Ecosystem</h2>
-          <p className="body" style={{ marginTop: 16 }}>
+          <p className="body" style={{ marginTop: 16, marginInline: "auto" }}>
             Project Bifrost is built around one global gaming profile. The profile carries your
-            identity across the games connected to Bifrost, bringing players, games and
-            companies together in one universe.
+            identity across the games connected to Bifrost, bringing players, games and companies
+            together in one universe.
           </p>
         </div>
 
-        <div className={pillars.grid}>
-          {PILLARS.map(({ icon: Icon, title, text }) => (
-            <Frame key={title}>
-              <Icon className={pillars.icon} />
-              <p className={pillars.title}>{title}</p>
-              <p className={pillars.text}>{text}</p>
-            </Frame>
+        <div className={styles.grid}>
+          {FEATURES.map(({ image, icon, title, text }) => (
+            <RuneFeatureCard key={title} image={image} icon={icon} title={title} href="#how-to-connect">
+              {text}
+            </RuneFeatureCard>
           ))}
         </div>
       </div>

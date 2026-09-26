@@ -1,37 +1,27 @@
+import { RuneSteps } from "./ui";
 import styles from "./how-to-connect-section.module.css";
+
+const STEPS = [
+  { label: "Download Bifrost", description: "Get the latest version of the Bifrost app." },
+  { label: "Install Steam", description: "If you don't have Steam installed yet." },
+  { label: "Log In or Register", description: "Create your Bifrost profile in seconds." },
+  { label: "Connect Your Game", description: "Select your game and installation folder." },
+  { label: "You're Ready", description: "Game connected — Bifrost is ready." },
+];
 
 export function HowToConnectSection() {
   return (
     <section id="how-to-connect" className="section">
       <div className="container">
-        <div className="sectionHead">
-          <p className="eyebrow">How to Connect</p>
-          <h2 className="h2">How to Become Part of Bifrost</h2>
-          <p className="body" style={{ marginTop: 16 }}>
-            Bifrost is still being built. Here&apos;s how it comes together for both players and
-            game developers once the bridge opens.
+        <div className="sectionHead sectionHead--center">
+          <p className="eyebrow" style={{ justifyContent: "center" }}>
+            How to Connect
           </p>
+          <h2 className="h2">How to Get Started</h2>
+          <p className={styles.subhead}>Get Connected in Minutes</p>
         </div>
 
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <span className={styles.badge}>Coming soon</span>
-            <p className={styles.title}>For players</p>
-            <p className={styles.text}>
-              With the Bifrost app, you get one global gaming profile that follows you across the
-              games connected to Bifrost — with progression and rewards gathered in one place.
-            </p>
-          </div>
-
-          <div className={styles.card}>
-            <span className={styles.badge}>Coming soon</span>
-            <p className={styles.title}>For game developers &amp; companies</p>
-            <p className={styles.text}>
-              Want to connect your game to the Bifrost ecosystem through the Bifrost API? We&apos;re
-              opening up for partnerships as the platform develops.
-            </p>
-          </div>
-        </div>
+        <RuneSteps steps={STEPS} className={styles.steps} />
       </div>
     </section>
   );

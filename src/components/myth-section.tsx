@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Frame } from "./frame";
+import { RunePanel } from "./ui";
 import styles from "./myth-section.module.css";
 
 export function MythSection() {
@@ -7,7 +7,7 @@ export function MythSection() {
     <section id="myth" className="section section--tight">
       <div className="container">
         <div className={styles.layout}>
-          <Frame className={styles.plate}>
+          <RunePanel variant="glow">
             <Image
               src="/images/bifrost-poster.jpg"
               alt="Project Bifrost emblem: a hooded figure and a wolf before a glowing rune portal"
@@ -16,7 +16,7 @@ export function MythSection() {
               className={styles.image}
               sizes="(max-width: 860px) 90vw, 420px"
             />
-          </Frame>
+          </RunePanel>
 
           <div className={styles.copy}>
             <p className="eyebrow">Norse mythology</p>

@@ -2,10 +2,36 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(7, 8, 11, 0.72);
+  background: rgba(7, 8, 11, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
+}
+
+.dragon {
+  position: absolute;
+  top: -6px;
+  width: 96px;
+  height: auto;
+  opacity: 0.92;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+  display: none;
+}
+
+.dragonLeft {
+  left: 4px;
+}
+
+.dragonRight {
+  right: 4px;
+  transform: scaleX(-1);
+}
+
+@media (min-width: 1240px) {
+  .dragon {
+    display: block;
+  }
 }
 
 .bar {
@@ -34,9 +60,7 @@
 }
 
 .headerCta {
-  --chamfer: 8px;
-  padding: 10px 20px;
-  font-size: 0.78rem;
+  flex-shrink: 0;
 }
 
 .menuButton {
@@ -102,13 +126,13 @@
   border-bottom: 1px solid var(--border);
 }
 
-.mobileCta {
-  color: var(--bronze-strong) !important;
-  border-bottom: none !important;
-  font-family: var(--font-display);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-size: 0.85rem !important;
+.mobileCtaItem {
+  margin-top: 10px;
+  border-bottom: none;
+}
+
+.mobileCtaButton {
+  width: 100%;
 }
 
 @media (max-width: 860px) {

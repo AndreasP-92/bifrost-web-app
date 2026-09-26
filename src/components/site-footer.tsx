@@ -49,8 +49,19 @@ export function SiteFooter() {
       </div>
 
       <div className={`container ${styles.bottom}`}>
-        <span>© {year} Project Bifrost. All rights reserved.</span>
-        <span>CVR 45801837</span>
+        <span>© {year} Project Bifrost. All rights reserved. CVR 45801837</span>
+
+        <span className={styles.legal}>
+          <span className={styles.legalLink}>Privacy Policy</span>
+          <span aria-hidden="true">|</span>
+          <span className={styles.legalLink}>Terms of Service</span>
+          <span aria-hidden="true">|</span>
+          <span className={styles.legalLink}>Contact</span>
+        </span>
+
+        <span className={styles.lang}>
+          <span aria-hidden="true">&#127760;</span> English
+        </span>
       </div>
     </footer>
   );

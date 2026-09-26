@@ -1,4 +1,4 @@
-import { Frame } from "./frame";
+import { RunePanel } from "./ui";
 import styles from "./progression-section.module.css";
 
 const FEATURES = [
@@ -29,7 +29,7 @@ export function ProgressionSection() {
             </ul>
           </div>
 
-          <Frame className={styles.diagram}>
+          <RunePanel variant="glow" className={styles.diagram}>
             <div className={styles.games} aria-hidden="true">
               <span className={styles.gamePill}>Game A</span>
               <span className={styles.gamePill}>Game B</span>
@@ -40,7 +40,7 @@ export function ProgressionSection() {
               <span className={styles.profileLabel}>Bifrost Profile</span>
               <span className={styles.profileSub}>Progression · Rewards · Identity</span>
             </div>
-          </Frame>
+          </RunePanel>
         </div>
       </div>
     </section>

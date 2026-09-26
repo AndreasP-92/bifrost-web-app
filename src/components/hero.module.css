@@ -8,21 +8,30 @@
 .backdrop {
   position: absolute;
   inset: 0;
-  background-image: url("/images/hero-portal-wide.jpg");
+  background-image: url("/images/hero-citadel.jpg");
   background-size: cover;
-  background-position: 39% 0%;
-  opacity: 0.92;
-  filter: saturate(1.05) contrast(1.08) brightness(1.02);
+  background-position: 50% 55%;
+  opacity: 0.95;
+  filter: saturate(1.08) contrast(1.05);
 }
 
-.bridge {
+.longship {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.35;
+  right: 4%;
+  bottom: 0;
+  width: min(34vw, 420px);
+  height: auto;
+  opacity: 0.85;
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 60%, black 55%, transparent 100%);
+  mask-image: radial-gradient(70% 70% at 50% 60%, black 55%, transparent 100%);
   pointer-events: none;
-  mix-blend-mode: screen;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .longship {
+    display: block;
+  }
 }
 
 .embers {
@@ -39,18 +48,43 @@
 .content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+  max-width: 640px;
   padding-left: clamp(24px, 6vw, 88px);
   padding-right: 24px;
 }
 
-.title {
-  font-size: clamp(1.5rem, 4.6vw, 2.35rem);
-  line-height: 1.15;
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.wordmark {
+  width: min(100%, 480px);
+  height: auto;
+  margin-top: 8px;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.6));
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ice-strong);
+  text-shadow: 0 0 16px rgba(143, 211, 255, 0.35);
 }
 
 .lead {
-  margin-top: 22px;
+  margin-top: 20px;
 }
 
 .actions {
@@ -58,17 +92,4 @@
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 40px;
-}
-
-.motto {
-  margin-top: 32px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  color: var(--bronze-strong);
-  opacity: 0.9;
 }

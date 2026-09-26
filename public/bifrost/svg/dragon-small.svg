@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 300"><defs>
+<linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f0f2f1"/><stop offset=".18" stop-color="#8e9699"/>
+ <stop offset=".42" stop-color="#343a3d"/><stop offset=".62" stop-color="#b7bdbe"/>
+ <stop offset=".82" stop-color="#4b5255"/><stop offset="1" stop-color="#d5d9d8"/>
+</linearGradient>
+<linearGradient id="darksteel" x1="0" y1="0" x2="0" y2="1">
+ <stop stop-color="#71797c"/><stop offset=".5" stop-color="#1c2225"/><stop offset="1" stop-color="#565e61"/>
+</linearGradient>
+<radialGradient id="eye"><stop stop-color="#c8f5ff"/><stop offset=".4" stop-color="#4bc7ef"/><stop offset="1" stop-color="#08628b"/></radialGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity=".65"/></filter>
+</defs>
+<g filter="url(#shadow)" stroke-linejoin="round">
+<path d="M64 257c30-70 75-111 136-129 22-7 42-13 58-25 17-13 23-27 17-42-8-20-34-29-57-20-18 7-27 24-18 37 8 12 24 15 39 7-10 28-43 42-72 29-42-18-50-66-18-96 37-35 101-31 137 3 34 31 40 73 18 104-18 25-46 37-79 50-44 17-74 47-92 91z" fill="url(#darksteel)" stroke="#151a1c" stroke-width="11"/>
+<path d="M194 49l-34-25 8 37-34 4 29 21-22 22 47 3 31 24 35-11 29-24 61-6-41-23 25-25-52 8-25-21-37 16z" fill="url(#steel)" stroke="#171b1d" stroke-width="9"/>
+<path d="m254 82 89 12-57 24-45 1-27-21z" fill="url(#darksteel)" stroke="#171b1d" stroke-width="8"/>
+<path d="m280 116 47 14-57 27-52-15 23-23z" fill="#252b2e" stroke="#111517" stroke-width="7"/>
+<ellipse cx="250" cy="75" rx="8" ry="7" fill="url(#eye)" stroke="#101416" stroke-width="3"/>
+<path d="M98 233c32-21 61-24 89-8M121 188c31-22 60-25 89-10M151 150c28-22 54-27 80-15" fill="none" stroke="url(#steel)" stroke-width="13"/>
+</g></svg>

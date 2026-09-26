@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><defs>
+<linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f0f2f1"/><stop offset=".18" stop-color="#8e9699"/>
+ <stop offset=".42" stop-color="#343a3d"/><stop offset=".62" stop-color="#b7bdbe"/>
+ <stop offset=".82" stop-color="#4b5255"/><stop offset="1" stop-color="#d5d9d8"/>
+</linearGradient>
+<linearGradient id="darksteel" x1="0" y1="0" x2="0" y2="1">
+ <stop stop-color="#71797c"/><stop offset=".5" stop-color="#1c2225"/><stop offset="1" stop-color="#565e61"/>
+</linearGradient>
+<radialGradient id="eye"><stop stop-color="#c8f5ff"/><stop offset=".4" stop-color="#4bc7ef"/><stop offset="1" stop-color="#08628b"/></radialGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity=".65"/></filter>
+</defs>
+<g filter="url(#shadow)">
+<path d="M35 35h430v70H105v360H35z" fill="url(#darksteel)" stroke="url(#steel)" stroke-width="10"/>
+<path d="M72 72h330c-46 25-79 58-99 99-28-35-60-60-99-77-14 43-40 76-79 99-8-46-25-86-53-121z" fill="#171d20" stroke="#838d91" stroke-width="7"/>
+<!-- knotwork -->
+<path d="M91 78c51 13 85 43 103 90 18-42 49-69 93-81 18 40 48 68 91 84-44 16-74 45-91 88-17-43-48-72-92-88-16 44-45 75-87 93 9-49 3-92-17-128" fill="none" stroke="url(#steel)" stroke-width="13"/>
+<path d="M67 326c45-8 80-31 105-68 20 38 51 63 94 74-41 17-70 45-86 85-20-37-51-61-93-71" fill="none" stroke="#8b969a" stroke-width="12"/>
+<circle cx="195" cy="170" r="12" fill="#252c2f" stroke="#c1c8ca" stroke-width="5"/>
+</g></svg>

@@ -75,7 +75,30 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 8px;
+  align-items: center;
+  gap: 12px;
   font-size: 0.8rem;
   color: var(--text-faint);
+}
+
+.legal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legalLink {
+  cursor: default;
+  transition: color 0.2s ease;
+}
+
+.legalLink:hover {
+  color: var(--text-muted);
+}
+
+.lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
 }

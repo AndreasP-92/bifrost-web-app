@@ -1,38 +1,45 @@
-import { BridgeMotif } from "./icons";
+import Image from "next/image";
 import { Embers } from "./embers";
+import { ChevronDownIcon, RuneButton, UI_ART, WindowsIcon } from "./ui";
 import styles from "./hero.module.css";
 
 export function Hero() {
   return (
     <section id="top" className={styles.hero}>
       <div className={styles.backdrop} />
-      <BridgeMotif className={styles.bridge} />
+      <Image {...UI_ART.bgLongship} alt="" aria-hidden="true" className={styles.longship} />
       <Embers className={styles.embers} />
       <div className={styles.veil} />
 
       <div className={styles.content}>
-        <p className="eyebrow">One bridge. One gaming universe.</p>
-        <h1 className={`h1 ${styles.title}`}>
-          Welcome to <span className="glow">Project Bifrost</span>
-        </h1>
+        <h1 className={styles.srOnly}>Project Bifrost — A Global Gaming Platform</h1>
+
+        <p className="eyebrow">Play. Compete. Connect.</p>
+
+        <Image
+          src="/images/ui/logo-wordmark.png"
+          alt="Bifrost"
+          width={760}
+          height={180}
+          className={styles.wordmark}
+          priority
+        />
+
+        <p className={styles.subtitle}>A Global Gaming Platform</p>
+
         <p className={`lead ${styles.lead}`}>
-          In Norse mythology, Bifrost is the bridge that connects the worlds. Project Bifrost is
-          our modern take on that bridge — one unified gaming ecosystem, built around one global
-          gaming profile that connects players, games and companies.
+          Bifrost brings your favorite games together in one global profile. Play, compete, earn
+          rewards and connect with a worldwide community.
         </p>
 
         <div className={styles.actions}>
-          <a href="#bifrost" className="btn btnPrimary">
-            Explore Bifrost
-          </a>
-          <a href="#how-to-connect" className="btn btnGhost">
-            How to Connect
-          </a>
+          <RuneButton href="#download" icon={<WindowsIcon />}>
+            Download Bifrost
+          </RuneButton>
+          <RuneButton href="#bifrost" variant="secondary" trailingIcon={<ChevronDownIcon />}>
+            Learn More
+          </RuneButton>
         </div>
-
-        <p className={styles.motto}>
-          <span aria-hidden="true">&mdash;</span> Fate chooses those who dare enter the Bifrost.
-        </p>
       </div>
     </section>
   );

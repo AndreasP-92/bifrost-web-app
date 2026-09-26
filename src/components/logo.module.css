@@ -1,7 +1,6 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   transition: opacity 0.2s ease;
 }
 
@@ -10,31 +9,13 @@
 }
 
 .mark {
-  width: 48px;
-  height: 48px;
+  width: auto;
+  height: 34px;
   flex-shrink: 0;
-  border-radius: 50%;
-  mix-blend-mode: screen;
 }
 
-.word {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.16em;
-  background: var(--steel);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
-}
-
-.wordSub {
-  font-size: 0.55rem;
-  letter-spacing: 0.38em;
-  color: var(--bronze-strong);
-  margin-top: 4px;
+@media (min-width: 640px) {
+  .mark {
+    height: 40px;
+  }
 }

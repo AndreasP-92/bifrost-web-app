@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 620"><defs>
+<linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+ <stop offset="0" stop-color="#f0f2f1"/><stop offset=".18" stop-color="#8e9699"/>
+ <stop offset=".42" stop-color="#343a3d"/><stop offset=".62" stop-color="#b7bdbe"/>
+ <stop offset=".82" stop-color="#4b5255"/><stop offset="1" stop-color="#d5d9d8"/>
+</linearGradient>
+<linearGradient id="darksteel" x1="0" y1="0" x2="0" y2="1">
+ <stop stop-color="#71797c"/><stop offset=".5" stop-color="#1c2225"/><stop offset="1" stop-color="#565e61"/>
+</linearGradient>
+<radialGradient id="eye"><stop stop-color="#c8f5ff"/><stop offset=".4" stop-color="#4bc7ef"/><stop offset="1" stop-color="#08628b"/></radialGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity=".65"/></filter>
+</defs>
+<g filter="url(#shadow)">
+<ellipse cx="260" cy="310" rx="205" ry="270" fill="#202629" stroke="url(#steel)" stroke-width="18"/>
+<ellipse cx="260" cy="310" rx="184" ry="247" fill="#282d2f" stroke="#5f4c3e" stroke-width="9"/>
+<circle cx="260" cy="310" r="91" fill="#1c2225" stroke="url(#steel)" stroke-width="12"/>
+<circle cx="260" cy="310" r="64" fill="#242a2d" stroke="#76604b" stroke-width="7"/>
+<!-- radial carved divisions -->
+<g stroke="#717a7e" stroke-width="7" fill="none">
+<path d="M260 63v156M260 401v156M77 310h92M351 310h92"/>
+<path d="M132 121l72 110M316 389l72 110M388 121l-72 110M204 389l-72 110"/>
+</g>
+<!-- runic ring marks -->
+<g stroke="#9ba4a7" stroke-width="6" fill="none">
+<path d="M170 100l18 30 15-32m49-22 8 39 18-31m54 17-17 32 35-10M111 223l34 9-25 25m279-34-34 9 25 25M112 397l33-11-22-27m276 38-33-11 22-27M170 520l18-30 15 32m49 22 8-39 18 31m54-17-17-32 35 10"/>
+</g>
+<!-- center bind-rune -->
+<path d="M260 246v128m0-103-43 43m43-21 47-45m-47 77-40 40m40-78 43 43" stroke="#b6bec1" stroke-width="12" fill="none" stroke-linecap="round"/>
+<circle cx="260" cy="310" r="14" fill="#172126" stroke="#d2d7d8" stroke-width="5"/>
+<!-- cardinal metal studs -->
+<g fill="url(#steel)" stroke="#1a1f21" stroke-width="5"><circle cx="260" cy="45" r="14"/><circle cx="260" cy="575" r="14"/><circle cx="60" cy="310" r="14"/><circle cx="460" cy="310" r="14"/></g>
+</g></svg>

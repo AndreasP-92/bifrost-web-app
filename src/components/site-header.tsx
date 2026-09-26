@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { RuneButton, WindowsIcon } from "./ui";
 import { Logo } from "./logo";
 import styles from "./site-header.module.css";
 
@@ -24,6 +25,9 @@ export function SiteHeader() {
 
   return (
     <header className={styles.header}>
+      <img src="/bifrost/svg/dragon-small.svg" alt="" aria-hidden="true" className={`${styles.dragon} ${styles.dragonLeft}`} />
+      <img src="/bifrost/svg/dragon-small.svg" alt="" aria-hidden="true" className={`${styles.dragon} ${styles.dragonRight}`} />
+
       <div className={`container ${styles.bar}`}>
         <Logo />
 
@@ -37,9 +41,9 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <a href="#download" className={`btn btnGhost ${styles.headerCta}`}>
+        <RuneButton href="#download" size="sm" icon={<WindowsIcon />} className={styles.headerCta}>
           Download Bifrost
-        </a>
+        </RuneButton>
 
         <button
           type="button"
@@ -64,10 +68,16 @@ export function SiteHeader() {
                 </a>
               </li>
             ))}
-            <li>
-              <a href="#download" onClick={() => setOpen(false)} className={styles.mobileCta}>
+            <li className={styles.mobileCtaItem}>
+              <RuneButton
+                href="#download"
+                size="sm"
+                icon={<WindowsIcon />}
+                onClick={() => setOpen(false)}
+                className={styles.mobileCtaButton}
+              >
                 Download Bifrost
-              </a>
+              </RuneButton>
             </li>
           </ul>
         </nav>
