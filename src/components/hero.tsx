@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Embers } from "./embers";
+import { Flames } from "./flames";
 import { ChevronDownIcon, RuneButton, WindowsIcon } from "./ui";
 import styles from "./hero.module.css";
 
@@ -9,6 +10,7 @@ export function Hero() {
       <div className={styles.backdrop} />
       <div className={styles.water} aria-hidden="true" />
       <div className={styles.waterReflection} aria-hidden="true" />
+      <Flames className={styles.flames} />
       <Embers className={styles.embers} />
       <div className={styles.veil} />
 
