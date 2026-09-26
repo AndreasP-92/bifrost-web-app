@@ -6,7 +6,7 @@ const NAV_LINKS = [
   { href: "#bifrost", label: "Bifrost" },
   { href: "#what-is-bifrost", label: "For Gamers" },
   { href: "#progression", label: "Progression" },
-  { href: "#games", label: "Games & API" },
+  // { href: "#games", label: "Games & API" }, // temporarily hidden, keep for later reuse
   // { href: "#how-to-connect", label: "How to Connect" }, // temporarily hidden, keep for later reuse
   { href: "#roadmap", label: "Roadmap" },
 ];
