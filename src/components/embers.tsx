@@ -28,11 +28,11 @@ const FIRE_EMBERS = [
   { left: "3.2%", start: "38%", size: 4, duration: 2.4, delay: 2.2, drift: -9, rise: -115 },
 
   // right brazier, near the ship
-  { left: "39%", start: "51%", size: 5, duration: 2.4, delay: 0, drift: -8, rise: -120 },
-  { left: "40.4%", start: "52%", size: 4, duration: 2, delay: 0.4, drift: 8, rise: -100 },
-  { left: "39.6%", start: "50%", size: 4, duration: 2.6, delay: 0.8, drift: -6, rise: -130 },
-  { left: "40%", start: "53%", size: 5, duration: 2.2, delay: 1.2, drift: 7, rise: -110 },
-  { left: "39.3%", start: "51%", size: 4, duration: 2.7, delay: 1.7, drift: -8, rise: -125 },
+  { left: "39%", start: "36%", size: 5, duration: 2.4, delay: 0, drift: -8, rise: -120 },
+  { left: "40.4%", start: "36%", size: 4, duration: 2, delay: 0.4, drift: 8, rise: -100 },
+  { left: "39.6%", start: "36%", size: 4, duration: 2.6, delay: 0.8, drift: -6, rise: -130 },
+  { left: "40%", start: "36%", size: 5, duration: 2.2, delay: 1.2, drift: 7, rise: -110 },
+  { left: "39.3%", start: "36%", size: 4, duration: 2.7, delay: 1.7, drift: -8, rise: -125 },
 ];
 
 export function Embers({ className }: { className?: string }) {
