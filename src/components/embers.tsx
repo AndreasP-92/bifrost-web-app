@@ -48,7 +48,7 @@ const FIRES = [
   },
   {
     // torch on the wooden dock/pier
-    fx: 0.609,
+    fx: 0.619,
     fy: 0.668,
     embers: [
       { dx: -5, size: 5, duration: 2.4, delay: 0, drift: -7, rise: -115 },
