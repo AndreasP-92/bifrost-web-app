@@ -25,9 +25,6 @@ export function SiteHeader() {
 
   return (
     <header className={styles.header}>
-      <img src="/bifrost/svg/dragon-small.svg" alt="" aria-hidden="true" className={`${styles.dragon} ${styles.dragonLeft}`} />
-      <img src="/bifrost/svg/dragon-small.svg" alt="" aria-hidden="true" className={`${styles.dragon} ${styles.dragonRight}`} />
-
       <div className={`container ${styles.bar}`}>
         <Logo />
 

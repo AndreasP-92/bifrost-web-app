@@ -8,6 +8,7 @@ export function Hero() {
     <section id="top" className={styles.hero}>
       <div className={styles.backdrop} />
       <div className={styles.water} aria-hidden="true" />
+      <div className={styles.waterReflection} aria-hidden="true" />
       <Embers className={styles.embers} />
       <div className={styles.veil} />
 

@@ -6,10 +6,10 @@ export function Logo() {
   return (
     <Link href="/" className={styles.logo} aria-label="Project Bifrost — back to homepage">
       <Image
-        src="/images/ui/logo-wordmark-small.png"
+        src="/images/ui/logo-wordmark.png"
         alt="Bifrost"
-        width={434}
-        height={120}
+        width={760}
+        height={180}
         className={styles.mark}
         priority
       />

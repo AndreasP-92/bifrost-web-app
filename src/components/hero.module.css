@@ -17,13 +17,11 @@
 
 .water {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 40%;
-  overflow: hidden;
+  inset: 0;
   pointer-events: none;
   mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(38% 42% at 80% 84%, black 30%, transparent 75%);
+  mask-image: radial-gradient(38% 42% at 80% 84%, black 30%, transparent 75%);
 }
 
 .water::before,
@@ -54,6 +52,15 @@
   opacity: 0.7;
 }
 
+.waterReflection {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: radial-gradient(9% 34% at 76% 80%, rgba(150, 210, 255, 0.55), transparent 72%);
+  animation: reflectionPulse 4s ease-in-out infinite;
+}
+
 @keyframes shimmer {
   0% {
     transform: translate3d(-6%, 0, 0);
@@ -66,9 +73,20 @@
   }
 }
 
+@keyframes reflectionPulse {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .water::before,
-  .water::after {
+  .water::after,
+  .waterReflection {
     animation: none;
   }
 }

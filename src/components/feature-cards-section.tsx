@@ -31,19 +31,6 @@ const FEATURES = [
 export function FeatureCardsSection() {
   return (
     <section id="bifrost" className="section">
-      <img
-        src="/bifrost/svg/dragon-large.svg"
-        alt=""
-        aria-hidden="true"
-        className={`${styles.dragon} ${styles.dragonLeft}`}
-      />
-      <img
-        src="/bifrost/svg/dragon-large.svg"
-        alt=""
-        aria-hidden="true"
-        className={`${styles.dragon} ${styles.dragonRight}`}
-      />
-
       <div className={styles.wrap}>
         <div className="sectionHead sectionHead--center">
           <p className="eyebrow" style={{ justifyContent: "center" }}>

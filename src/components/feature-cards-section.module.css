@@ -7,39 +7,6 @@
   padding-inline: 24px;
 }
 
-.dragon {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  width: clamp(90px, 10vw, 190px);
-  object-fit: contain;
-  object-position: top center;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.dragonLeft {
-  left: 0;
-}
-
-.dragonRight {
-  right: 0;
-  transform: scaleX(-1);
-}
-
-@media (min-width: 861px) {
-  .wrap {
-    padding-inline: 130px;
-  }
-}
-
-@media (max-width: 860px) {
-  .dragon {
-    display: none;
-  }
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

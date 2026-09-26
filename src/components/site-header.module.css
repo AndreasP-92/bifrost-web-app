@@ -8,32 +8,6 @@
   border-bottom: 1px solid var(--border);
 }
 
-.dragon {
-  position: absolute;
-  top: -6px;
-  width: 96px;
-  height: auto;
-  opacity: 0.92;
-  pointer-events: none;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
-  display: none;
-}
-
-.dragonLeft {
-  left: 4px;
-}
-
-.dragonRight {
-  right: 4px;
-  transform: scaleX(-1);
-}
-
-@media (min-width: 1240px) {
-  .dragon {
-    display: block;
-  }
-}
-
 .bar {
   height: var(--header-height);
   display: flex;
