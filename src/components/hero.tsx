@@ -10,7 +10,7 @@ export function Hero() {
       <Embers className={styles.embers} />
       <div className={styles.veil} />
 
-      <div className={`container ${styles.content}`}>
+      <div className={styles.content}>
         <p className="eyebrow">Én bro. Ét gaming-univers.</p>
         <h1 className="h1">
           Welcome to <span className="glow">Project Bifrost</span>
