@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { Embers } from "./embers";
-import { ChevronDownIcon, RuneButton, UI_ART, WindowsIcon } from "./ui";
+import { ChevronDownIcon, RuneButton, WindowsIcon } from "./ui";
 import styles from "./hero.module.css";
 
 export function Hero() {
   return (
     <section id="top" className={styles.hero}>
       <div className={styles.backdrop} />
-      <Image {...UI_ART.bgLongship} alt="" aria-hidden="true" className={styles.longship} />
+      <div className={styles.water} aria-hidden="true" />
       <Embers className={styles.embers} />
       <div className={styles.veil} />
 
@@ -26,11 +26,6 @@ export function Hero() {
         />
 
         <p className={styles.subtitle}>A Global Gaming Platform</p>
-
-        <p className={`lead ${styles.lead}`}>
-          Bifrost brings your favorite games together in one global profile. Play, compete, earn
-          rewards and connect with a worldwide community.
-        </p>
 
         <div className={styles.actions}>
           <RuneButton href="#download" icon={<WindowsIcon />}>

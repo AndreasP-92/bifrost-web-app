@@ -8,29 +8,68 @@
 .backdrop {
   position: absolute;
   inset: 0;
-  background-image: url("/images/hero-citadel.jpg");
+  background-image: url("/images/hero-background.jpg");
   background-size: cover;
-  background-position: 50% 55%;
+  background-position: 62% 50%;
   opacity: 0.95;
   filter: saturate(1.08) contrast(1.05);
 }
 
-.longship {
+.water {
   position: absolute;
-  right: 4%;
+  left: 0;
+  right: 0;
   bottom: 0;
-  width: min(34vw, 420px);
-  height: auto;
-  opacity: 0.85;
-  -webkit-mask-image: radial-gradient(70% 70% at 50% 60%, black 55%, transparent 100%);
-  mask-image: radial-gradient(70% 70% at 50% 60%, black 55%, transparent 100%);
+  height: 40%;
+  overflow: hidden;
   pointer-events: none;
-  display: none;
+  mix-blend-mode: screen;
 }
 
-@media (min-width: 900px) {
-  .longship {
-    display: block;
+.water::before,
+.water::after {
+  content: "";
+  position: absolute;
+  inset: -30% -60%;
+  background: repeating-linear-gradient(
+    98deg,
+    transparent 0%,
+    rgba(170, 214, 255, 0.22) 1.4%,
+    transparent 3%,
+    transparent 8%
+  );
+  animation: shimmer 9s linear infinite;
+}
+
+.water::after {
+  background: repeating-linear-gradient(
+    82deg,
+    transparent 0%,
+    rgba(120, 190, 255, 0.14) 1%,
+    transparent 2.4%,
+    transparent 11%
+  );
+  animation-duration: 14s;
+  animation-direction: reverse;
+  opacity: 0.7;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translate3d(-6%, 0, 0);
+  }
+  50% {
+    transform: translate3d(4%, 1%, 0);
+  }
+  100% {
+    transform: translate3d(-6%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .water::before,
+  .water::after {
+    animation: none;
   }
 }
 
@@ -81,10 +120,6 @@
   text-transform: uppercase;
   color: var(--ice-strong);
   text-shadow: 0 0 16px rgba(143, 211, 255, 0.35);
-}
-
-.lead {
-  margin-top: 20px;
 }
 
 .actions {
