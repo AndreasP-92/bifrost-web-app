@@ -152,6 +152,45 @@ export const SearchIcon = (p: IconProps) => (
   </Icon>
 );
 
+export const LinkIcon = (p: IconProps) => (
+  <Icon {...p}>
+    <path d="M9.5 14.5 14.5 9.5" />
+    <path d="M11 6.5 13 4.5a3.5 3.5 0 0 1 5 5l-2 2M13 17.5 11 19.5a3.5 3.5 0 0 1-5-5l2-2" />
+  </Icon>
+);
+
+export const GiftIcon = (p: IconProps) => (
+  <Icon {...p}>
+    <path d="M4 10.5h16v3.5H4z" />
+    <path d="M5 14h14v6.5H5z" />
+    <path d="M12 10.5v10" />
+    <path d="M12 10.5c-1-3-3-5-5-4.5-1.6.4-1.6 3 0 4.5M12 10.5c1-3 3-5 5-4.5 1.6.4 1.6 3 0 4.5" />
+  </Icon>
+);
+
+export const ControllerIcon = (p: IconProps) => (
+  <Icon {...p}>
+    <path d="M6.5 8.5h11l2 8a2.3 2.3 0 0 1-3.8 2L14 16.5h-4l-1.7 2a2.3 2.3 0 0 1-3.8-2z" />
+    <path d="M8 11v3.2M6.4 12.6h3.2" />
+    <circle cx="16" cy="11.3" r="0.9" fill="currentColor" stroke="none" />
+    <circle cx="18" cy="13.3" r="0.9" fill="currentColor" stroke="none" />
+  </Icon>
+);
+
+export const UserIcon = (p: IconProps) => (
+  <Icon {...p}>
+    <circle cx="12" cy="8" r="3.6" />
+    <path d="M5 20c0-4 3-6.5 7-6.5s7 2.5 7 6.5" />
+  </Icon>
+);
+
+export const MountainIcon = (p: IconProps) => (
+  <Icon {...p}>
+    <path d="m3 18 6-10 4 6 2-3 6 7Z" />
+    <circle cx="8" cy="6.5" r="1.6" />
+  </Icon>
+);
+
 /* Brand marks: simplified, filled glyphs for social links. */
 
 export const WindowsIcon = (p: IconProps) => (
@@ -197,6 +236,11 @@ export const RUNE_ICONS = {
   chevronDown: ChevronDownIcon,
   chevronUp: ChevronUpIcon,
   search: SearchIcon,
+  link: LinkIcon,
+  gift: GiftIcon,
+  controller: ControllerIcon,
+  user: UserIcon,
+  mountain: MountainIcon,
   windows: WindowsIcon,
   discord: DiscordIcon,
   youtube: YouTubeIcon,

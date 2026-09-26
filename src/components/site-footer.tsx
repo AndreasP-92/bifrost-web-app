@@ -4,6 +4,7 @@ import styles from "./site-footer.module.css";
 
 const NAV_LINKS = [
   { href: "#bifrost", label: "Bifrost" },
+  { href: "#what-is-bifrost", label: "For Gamers" },
   { href: "#progression", label: "Progression" },
   { href: "#games", label: "Games & API" },
   // { href: "#how-to-connect", label: "How to Connect" }, // temporarily hidden, keep for later reuse

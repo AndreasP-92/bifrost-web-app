@@ -7,6 +7,7 @@ import { ProgressionSection } from "@/components/progression-section";
 import { RoadmapSection } from "@/components/roadmap-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { WhatIsBifrostSection } from "@/components/what-is-bifrost-section";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <FeatureCardsSection />
+        <WhatIsBifrostSection />
         <ProgressionSection />
         <IntegrationSection />
         {/* <HowToConnectSection /> temporarily hidden, keep for later reuse */}
