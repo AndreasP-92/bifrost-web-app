@@ -19,7 +19,7 @@ export const UI_ART = {
   ornamentShield: { src: "/images/ui/ornament-shield.png", width: 250, height: 280 },
   ornamentCorner: { src: "/images/ui/ornament-corner.png", width: 246, height: 234 },
   runeCircle: { src: "/images/ui/rune-circle.png", width: 256, height: 272 },
-  runeLarge: { src: "/images/ui/rune-large.png", width: 160, height: 264 },
+  runeLarge: { src: "/images/ui/bifrost-rune.png", width: 340, height: 637 },
   bgMountains: { src: "/images/ui/bg-mountains.webp", width: 556, height: 266 },
   bgCitadel: { src: "/images/ui/bg-citadel.webp", width: 568, height: 266 },
   bgLongship: { src: "/images/ui/bg-longship.webp", width: 356, height: 266 },
