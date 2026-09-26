@@ -6,7 +6,8 @@ const NAV_LINKS = [
   { href: "#bifrost", label: "Bifrost" },
   { href: "#progression", label: "Progression" },
   { href: "#games", label: "Games & API" },
-  { href: "#how-to-connect", label: "How to Connect" },
+  // { href: "#how-to-connect", label: "How to Connect" }, // temporarily hidden, keep for later reuse
+  { href: "#roadmap", label: "Roadmap" },
 ];
 
 export function SiteFooter() {

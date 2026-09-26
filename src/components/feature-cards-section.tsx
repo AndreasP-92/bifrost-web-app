@@ -46,7 +46,7 @@ export function FeatureCardsSection() {
 
         <div className={styles.grid}>
           {FEATURES.map(({ image, icon, title, text }) => (
-            <RuneFeatureCard key={title} image={image} icon={icon} title={title} href="#how-to-connect">
+            <RuneFeatureCard key={title} image={image} icon={icon} title={title} href="#roadmap">
               {text}
             </RuneFeatureCard>
           ))}
