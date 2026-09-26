@@ -35,6 +35,29 @@ const FIRES = [
       { dx: -4, size: 4, duration: 2.7, delay: 1.7, drift: -8, rise: -125 },
     ],
   },
+  {
+    // small ground fire at the base of the ship
+    fx: 0.437,
+    fy: 0.696,
+    embers: [
+      { dx: -4, size: 4, duration: 2.3, delay: 0, drift: -6, rise: -95 },
+      { dx: 3, size: 3, duration: 1.9, delay: 0.5, drift: 5, rise: -80 },
+      { dx: -1, size: 3, duration: 2.5, delay: 1, drift: -4, rise: -105 },
+      { dx: 2, size: 3, duration: 2.1, delay: 1.5, drift: 6, rise: -85 },
+    ],
+  },
+  {
+    // torch on the wooden dock/pier
+    fx: 0.609,
+    fy: 0.668,
+    embers: [
+      { dx: -5, size: 5, duration: 2.4, delay: 0, drift: -7, rise: -115 },
+      { dx: 5, size: 4, duration: 2, delay: 0.45, drift: 7, rise: -95 },
+      { dx: -2, size: 4, duration: 2.7, delay: 0.9, drift: -5, rise: -125 },
+      { dx: 3, size: 5, duration: 2.2, delay: 1.35, drift: 6, rise: -105 },
+      { dx: -4, size: 4, duration: 2.6, delay: 1.8, drift: -8, rise: -120 },
+    ],
+  },
 ];
 
 export function Embers({ className }: { className?: string }) {
