@@ -8,9 +8,9 @@
 .backdrop {
   position: absolute;
   inset: 0;
-  background-image: url("/images/hero-portal.jpg");
+  background-image: url("/images/hero-portal-wide.jpg");
   background-size: cover;
-  background-position: 50% 30%;
+  background-position: 50% 42%;
   opacity: 0.92;
   filter: saturate(1.05) contrast(1.08) brightness(1.02);
 }
