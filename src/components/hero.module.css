@@ -28,13 +28,16 @@
 .water::after {
   content: "";
   position: absolute;
-  inset: -30% -60%;
+  top: 0;
+  bottom: 0;
+  left: -220px;
+  right: -220px;
   background: repeating-linear-gradient(
     98deg,
-    transparent 0%,
-    rgba(170, 214, 255, 0.22) 1.4%,
-    transparent 3%,
-    transparent 8%
+    transparent 0px,
+    rgba(170, 214, 255, 0.22) 14px,
+    transparent 30px,
+    transparent 96px
   );
   animation: shimmer 9s linear infinite;
 }
@@ -42,12 +45,12 @@
 .water::after {
   background: repeating-linear-gradient(
     98deg,
-    transparent 0%,
-    rgba(120, 190, 255, 0.14) 1%,
-    transparent 2.4%,
-    transparent 11%
+    transparent 0px,
+    rgba(120, 190, 255, 0.14) 12px,
+    transparent 28px,
+    transparent 130px
   );
-  animation-duration: 15s;
+  animation: shimmerSlow 15s linear infinite;
   opacity: 0.7;
 }
 
@@ -61,11 +64,20 @@
 }
 
 @keyframes shimmer {
-  0% {
-    transform: translate3d(9%, 0, 0);
+  from {
+    transform: translate3d(0, 0, 0);
   }
-  100% {
-    transform: translate3d(-9%, 0, 0);
+  to {
+    transform: translate3d(-97px, 0, 0);
+  }
+}
+
+@keyframes shimmerSlow {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-131px, 0, 0);
   }
 }
 
