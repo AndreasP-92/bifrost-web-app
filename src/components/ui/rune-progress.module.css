@@ -1,0 +1,41 @@
+.track {
+  --p: 10px;
+  --c: #3d9bff;
+  --c-light: #bfe6ff;
+  position: relative;
+  height: 20px;
+  padding: 5px calc(var(--p) + 2px);
+  isolation: isolate;
+}
+
+.track::before,
+.track::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 50%, calc(100% - var(--p)) 100%, var(--p) 100%, 0 50%);
+}
+
+.track::before {
+  inset: 0;
+  background: linear-gradient(180deg, #eef2f8, #6e7686 40%, #22252c 60%, #9aa3b2);
+}
+
+.track::after {
+  inset: 2px;
+  background: linear-gradient(180deg, #030405, #0d1016);
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--c-light) 0%, var(--c) 45%, color-mix(in srgb, var(--c) 60%, #000) 100%);
+  box-shadow: 0 0 10px var(--c), 0 0 2px var(--c-light);
+  transition: width 0.4s ease;
+}
+
+.gold {
+  --c: #f0b43d;
+  --c-light: #fff0c2;
+}

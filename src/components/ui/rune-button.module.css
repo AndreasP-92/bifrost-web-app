@@ -1,0 +1,180 @@
+.button {
+  --point: 16px;
+  --rim: 2px;
+  --steel: linear-gradient(180deg, #f2f5fa 0%, #9aa3b3 28%, #3b404b 52%, #858ea0 74%, #22252c 100%);
+  --fill: linear-gradient(180deg, #1b4fb8 0%, #0d2c73 55%, #071a47 100%);
+  --text-color: #eef5ff;
+  --glow: rgba(61, 155, 255, 0.55);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 calc(var(--point) + 30px);
+  border: 0;
+  background: none;
+  color: var(--text-color);
+  font-family: var(--font-display), serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  isolation: isolate;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.12);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--ice-strong);
+  outline-offset: 4px;
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  --steel: linear-gradient(180deg, #6a707c 0%, #3a3e46 50%, #25282e 100%);
+  --fill: linear-gradient(180deg, #23262e, #16181d);
+  --text-color: #737b8c;
+  --glow: transparent;
+  cursor: default;
+  transform: none;
+  filter: none;
+}
+
+/* The glow lives on a wrapper so the clip-path below does not cut it off */
+.shapeGlow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  filter: drop-shadow(0 0 10px var(--glow));
+}
+
+.shape {
+  position: absolute;
+  inset: 0;
+  background: var(--steel);
+  clip-path: polygon(
+    var(--point) 0,
+    calc(100% - var(--point)) 0,
+    100% 50%,
+    calc(100% - var(--point)) 100%,
+    var(--point) 100%,
+    0 50%
+  );
+}
+
+.shape::before {
+  content: "";
+  position: absolute;
+  inset: var(--rim);
+  background: var(--fill);
+  clip-path: inherit;
+  box-shadow: inset 0 0 18px rgba(143, 211, 255, 0.35);
+}
+
+/* Inner light line along the top edge */
+.shape::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--point) + 6px);
+  right: calc(var(--point) + 6px);
+  top: calc(var(--rim) + 2px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(195, 233, 255, 0.8), transparent);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.icon {
+  display: inline-flex;
+  font-size: 1.3em;
+}
+
+.gem {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gemLeft {
+  left: -6px;
+}
+
+.gemRight {
+  right: -6px;
+}
+
+/* Variants */
+
+.secondary {
+  --fill: linear-gradient(180deg, #1a1f2a 0%, #0c0f15 100%);
+  --glow: rgba(61, 155, 255, 0.25);
+}
+
+.accent {
+  --steel: linear-gradient(180deg, #ffe2a8 0%, #c9974f 30%, #5a3813 55%, #b07a38 78%, #3a240c 100%);
+  --fill: linear-gradient(180deg, #3a1f0d 0%, #1c0f07 100%);
+  --text-color: #fff2dc;
+  --glow: rgba(255, 140, 74, 0.5);
+}
+
+/* Sizes */
+
+.sm {
+  --point: 9px;
+  --rim: 1px;
+  min-height: 30px;
+  padding: 0 calc(var(--point) + 14px);
+  font-size: 0.7rem;
+}
+
+.sm .label {
+  gap: 6px;
+}
+
+/* Round arrow button */
+
+.arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background:
+    radial-gradient(circle at 50% 35%, #1a1f2a, #07090d) padding-box,
+    linear-gradient(180deg, #eef2f8, #6e7686 45%, #2a2e36 70%, #a5aebd) border-box;
+  color: #e7ebf5;
+  font-size: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.18s ease, color 0.18s ease;
+}
+
+.arrow:hover,
+.arrowActive {
+  color: #c3e9ff;
+  background:
+    radial-gradient(circle at 50% 35%, #1d4fb3, #07143a) padding-box,
+    linear-gradient(180deg, #eef2f8, #6e7686 45%, #2a2e36 70%, #a5aebd) border-box;
+  box-shadow: 0 0 14px rgba(61, 155, 255, 0.6);
+}
+
+.arrow:focus-visible {
+  outline: 2px solid var(--ice-strong);
+  outline-offset: 3px;
+}

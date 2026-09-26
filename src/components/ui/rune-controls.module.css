@@ -1,0 +1,186 @@
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Toggle */
+
+.toggle {
+  appearance: none;
+  position: relative;
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  border: 1px solid #5d6573;
+  background: linear-gradient(180deg, #05060a, #151922);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #f4f7fc, #8a93a3 60%, #3a3f49);
+  transition: transform 0.2s ease;
+}
+
+.toggle:checked {
+  background: linear-gradient(180deg, #1d5bd6, #0b2a73);
+  box-shadow: 0 0 10px rgba(61, 155, 255, 0.7), inset 0 0 6px rgba(143, 211, 255, 0.5);
+}
+
+.toggle:checked::before {
+  transform: translateX(20px);
+}
+
+/* Checkbox */
+
+.checkWrap {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+}
+
+.checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  background:
+    linear-gradient(180deg, #05060a, #12151c) padding-box,
+    linear-gradient(180deg, #eef2f8, #6e7686 50%, #2a2e36) border-box;
+  cursor: pointer;
+}
+
+.checkMark {
+  position: absolute;
+  font-size: 16px;
+  color: #c3e9ff;
+  filter: drop-shadow(0 0 4px #3d9bff);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox:checked + .checkMark {
+  opacity: 1;
+}
+
+/* Radio */
+
+.radio {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background:
+    radial-gradient(circle, #05060a 60%, #12151c) padding-box,
+    linear-gradient(180deg, #eef2f8, #6e7686 50%, #2a2e36) border-box;
+  cursor: pointer;
+}
+
+.radio:checked {
+  background:
+    radial-gradient(circle, #c3e9ff 0 22%, #2f7cff 36%, #05060a 60%) padding-box,
+    linear-gradient(180deg, #eef2f8, #6e7686 50%, #2a2e36) border-box;
+  box-shadow: 0 0 8px rgba(61, 155, 255, 0.7);
+}
+
+.toggle:focus-visible,
+.checkbox:focus-visible,
+.radio:focus-visible,
+.input:focus-visible,
+.tab:focus-visible {
+  outline: 2px solid var(--ice-strong);
+  outline-offset: 2px;
+}
+
+/* Select + search */
+
+.field {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-width: 200px;
+}
+
+.input {
+  appearance: none;
+  width: 100%;
+  height: 40px;
+  padding: 0 38px 0 14px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background:
+    linear-gradient(180deg, #06070b, #10131a) padding-box,
+    linear-gradient(180deg, #aab3c2, #3b414c 50%, #6e7686) border-box;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.input::placeholder {
+  color: var(--text-faint);
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.input option {
+  background: #10131a;
+}
+
+.fieldIcon {
+  position: absolute;
+  right: 12px;
+  font-size: 18px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* Tabs */
+
+.tabs {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.tab {
+  min-width: 90px;
+  height: 36px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(180deg, #10131a, #06070b) padding-box,
+    linear-gradient(180deg, #8a93a3, #2a2e36) border-box;
+  font-family: var(--font-display), serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.tab[aria-selected="true"] {
+  background:
+    linear-gradient(180deg, #1d5bd6, #0b2a73) padding-box,
+    linear-gradient(180deg, #c3e9ff, #3d9bff) border-box;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(61, 155, 255, 0.55);
+}
+
+.tabPanel {
+  padding-top: 18px;
+}

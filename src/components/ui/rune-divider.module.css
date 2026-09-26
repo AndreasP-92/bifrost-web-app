@@ -1,0 +1,34 @@
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.line {
+  position: relative;
+  flex: 1;
+  height: 4px;
+}
+
+/* Forged: bevelled steel bar that tapers to a point at both ends */
+.forged .line {
+  background: linear-gradient(180deg, #e9eef6 0%, #8a93a4 40%, #2c3039 60%, #6f7888 100%);
+  clip-path: polygon(0 50%, 12px 0, 100% 0, 100% 100%, 12px 100%);
+  box-shadow: 0 0 10px rgba(61, 155, 255, 0.35);
+}
+
+.forged .line:last-child {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%);
+}
+
+/* Glow: thin beam of light fading out */
+.glow .line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4aa8ff 70%, #c3e9ff);
+  box-shadow: 0 0 8px #3d9bff;
+}
+
+.glow .line:last-child {
+  background: linear-gradient(90deg, #c3e9ff, #4aa8ff 30%, transparent);
+}

@@ -1,0 +1,115 @@
+.steps {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  list-style: none;
+  counter-reset: none;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+/* connecting beam, drawn from this marker to the next */
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: calc(50% + 26px);
+  right: calc(-50% + 26px);
+  height: 1px;
+  background: linear-gradient(90deg, #4aa8ff, rgba(74, 168, 255, 0.25));
+  box-shadow: 0 0 6px #3d9bff;
+}
+
+.todo:not(:last-child)::after {
+  background: rgba(143, 211, 255, 0.18);
+  box-shadow: none;
+}
+
+.marker {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+}
+
+.marker::before,
+.marker::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.marker::before {
+  inset: 0;
+  background: linear-gradient(135deg, #eef2f8, #6e7686 40%, #22252c 60%, #9aa3b2);
+}
+
+.marker::after {
+  inset: 3px;
+  background: radial-gradient(circle, #0f2f7a, #050a18 75%);
+}
+
+.number {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #dff1ff;
+  text-shadow: 0 0 8px #3d9bff;
+}
+
+.active .marker {
+  filter: drop-shadow(0 0 12px #3d9bff);
+}
+
+.active .marker::after {
+  background: radial-gradient(circle, #2f7cff, #0a2466 75%);
+}
+
+.todo .marker {
+  opacity: 0.6;
+}
+
+.label {
+  font-family: var(--font-display), serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  max-width: 12ch;
+  line-height: 1.4;
+}
+
+.active .label,
+.done .label {
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .steps {
+    grid-auto-flow: row;
+    gap: 18px;
+  }
+
+  .step {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .step:not(:last-child)::after {
+    display: none;
+  }
+
+  .label {
+    max-width: none;
+  }
+}
