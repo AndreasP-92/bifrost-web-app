@@ -7,7 +7,7 @@
 
 .ember {
   position: absolute;
-  bottom: -10px;
+  bottom: var(--start, -10px);
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
@@ -33,7 +33,7 @@
     opacity: 0.95;
   }
   100% {
-    transform: translateY(-480px) translateX(var(--drift)) scale(0.5);
+    transform: translateY(var(--rise, -480px)) translateX(var(--drift)) scale(0.5);
     opacity: 0;
   }
 }

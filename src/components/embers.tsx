@@ -17,6 +17,15 @@ const EMBERS = [
   { left: "97%", size: 10, duration: 7, delay: 5.6, drift: 14 },
 ];
 
+/** Denser little clusters rising from the two campfires painted in the hero art. */
+const FIRE_EMBERS = [
+  { left: "2.4%", start: "36%", size: 6, duration: 3.4, delay: 0, drift: 10, rise: -160 },
+  { left: "3.6%", start: "37%", size: 4, duration: 2.8, delay: 0.9, drift: -8, rise: -130 },
+  { left: "3%", start: "35%", size: 5, duration: 3.8, delay: 1.8, drift: 6, rise: -180 },
+  { left: "39%", start: "33%", size: 5, duration: 3, delay: 0.4, drift: -8, rise: -140 },
+  { left: "40.2%", start: "34%", size: 4, duration: 3.6, delay: 1.4, drift: 9, rise: -160 },
+];
+
 export function Embers({ className }: { className?: string }) {
   return (
     <div className={`${styles.field} ${className ?? ""}`} aria-hidden="true">
@@ -31,6 +40,23 @@ export function Embers({ className }: { className?: string }) {
               "--duration": `${e.duration}s`,
               "--delay": `${e.delay}s`,
               "--drift": `${e.drift}px`,
+            } as CSSProperties
+          }
+        />
+      ))}
+      {FIRE_EMBERS.map((e, i) => (
+        <span
+          key={`fire-${i}`}
+          className={styles.ember}
+          style={
+            {
+              left: e.left,
+              "--size": `${e.size}px`,
+              "--duration": `${e.duration}s`,
+              "--delay": `${e.delay}s`,
+              "--drift": `${e.drift}px`,
+              "--start": e.start,
+              "--rise": `${e.rise}px`,
             } as CSSProperties
           }
         />
