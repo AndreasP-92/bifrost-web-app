@@ -20,12 +20,12 @@ const EMBERS = [
 /** Denser little clusters rising from the two campfires painted in the hero art. */
 const FIRE_EMBERS = [
   // left campfire, near the tip of the painted flame
-  { left: "2.2%", start: "58%", size: 6, duration: 2.6, delay: 0, drift: 10, rise: -140 },
-  { left: "3.4%", start: "57%", size: 4, duration: 2.2, delay: 0.45, drift: -8, rise: -110 },
-  { left: "2.8%", start: "59%", size: 5, duration: 2.8, delay: 0.9, drift: 6, rise: -150 },
-  { left: "3.8%", start: "56%", size: 4, duration: 2.3, delay: 1.35, drift: -6, rise: -100 },
-  { left: "2.5%", start: "58%", size: 5, duration: 2.5, delay: 1.8, drift: 9, rise: -130 },
-  { left: "3.2%", start: "57%", size: 4, duration: 2.4, delay: 2.2, drift: -9, rise: -115 },
+  { left: "2.2%", start: "38%", size: 6, duration: 2.6, delay: 0, drift: 10, rise: -140 },
+  { left: "3.4%", start: "38%", size: 4, duration: 2.2, delay: 0.45, drift: -8, rise: -110 },
+  { left: "2.8%", start: "38%", size: 5, duration: 2.8, delay: 0.9, drift: 6, rise: -150 },
+  { left: "3.8%", start: "38%", size: 4, duration: 2.3, delay: 1.35, drift: -6, rise: -100 },
+  { left: "2.5%", start: "38%", size: 5, duration: 2.5, delay: 1.8, drift: 9, rise: -130 },
+  { left: "3.2%", start: "38%", size: 4, duration: 2.4, delay: 2.2, drift: -9, rise: -115 },
 
   // right brazier, near the ship
   { left: "39%", start: "51%", size: 5, duration: 2.4, delay: 0, drift: -8, rise: -120 },
