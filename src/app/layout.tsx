@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Cinzel, Inter } from "next/font/google";
+import { Cinzel, Cinzel_Decorative, Inter } from "next/font/google";
 import "./globals.css";
 
 const cinzel = Cinzel({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
+});
+
+const cinzelDecorative = Cinzel_Decorative({
+  variable: "--font-display-heavy",
+  subsets: ["latin"],
+  weight: ["700", "900"],
 });
 
 const inter = Inter({
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="da" className={`${cinzel.variable} ${inter.variable}`}>
+    <html lang="da" className={`${cinzel.variable} ${cinzelDecorative.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );

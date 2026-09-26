@@ -30,7 +30,7 @@ export function IntegrationSection() {
 
           <div className={styles.copy}>
             <p className="eyebrow">Spil &amp; API</p>
-            <h2 className="h2">Forbundet gennem Bifrost API&apos;et</h2>
+            <h2 className="h2">Forbundet gennem Bifrost API</h2>
             <p className="body" style={{ marginTop: 16 }}>
               Både eksisterende og nye spil kan integreres i Bifrost-økosystemet gennem Bifrost
               API&apos;et. Det giver spiludviklere en overordnet vej til at forbinde deres spil til
