@@ -1,0 +1,126 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(7, 8, 11, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.bar {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navDesktop ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navDesktop a {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.navDesktop a:hover {
+  color: var(--ice-strong);
+}
+
+.headerCta {
+  padding: 10px 20px;
+  font-size: 0.78rem;
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bun {
+  display: block;
+  height: 1.5px;
+  margin-inline: auto;
+  width: 18px;
+  background: var(--ice-strong);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.bunOpenTop {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.bunOpenMid {
+  opacity: 0;
+}
+
+.bunOpenBottom {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.mobilePanel {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid transparent;
+  background: var(--bg-elevated);
+  transition: max-height 0.25s ease;
+}
+
+.mobilePanelOpen {
+  max-height: 420px;
+  border-bottom-color: var(--border);
+}
+
+.mobilePanel nav ul {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 24px 24px;
+  gap: 4px;
+}
+
+.mobilePanel a {
+  display: block;
+  padding: 14px 4px;
+  font-size: 1rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.mobileCta {
+  color: var(--bronze-strong) !important;
+  border-bottom: none !important;
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.85rem !important;
+}
+
+@media (max-width: 860px) {
+  .navDesktop,
+  .headerCta {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+
+  .mobilePanel {
+    display: block;
+  }
+}

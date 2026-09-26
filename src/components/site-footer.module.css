@@ -1,0 +1,48 @@
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-elevated);
+  padding-block: 48px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.tagline {
+  margin-top: 14px;
+  max-width: 34ch;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nav a {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--ice-strong);
+}
+
+.bottom {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}

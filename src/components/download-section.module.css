@@ -1,0 +1,37 @@
+.section {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(50% 60% at 50% 40%, rgba(201, 151, 79, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  max-width: 620px;
+  margin-inline: auto;
+}
+
+.ctaWrap {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.ctaButton {
+  min-width: 240px;
+}
+
+.comingSoon {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bronze-strong);
+}

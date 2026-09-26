@@ -1,0 +1,34 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.85;
+}
+
+.mark {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.word {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.16em;
+  color: var(--text);
+}
+
+.wordSub {
+  font-size: 0.55rem;
+  letter-spacing: 0.38em;
+  color: var(--bronze-strong);
+  margin-top: 4px;
+}
