@@ -1,0 +1,61 @@
+.track {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  left: var(--start-left, 50%);
+  top: var(--start-top, 50%);
+  width: clamp(14px, 1.4vw, 24px);
+  height: clamp(14px, 1.4vw, 24px);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    circle,
+    rgba(235, 250, 255, 1) 0%,
+    rgba(180, 225, 255, 0.9) 30%,
+    rgba(120, 190, 255, 0.45) 60%,
+    transparent 80%
+  );
+  box-shadow: 0 0 18px 6px rgba(140, 205, 255, 0.55);
+  opacity: 0;
+  animation: beamTravel 7s cubic-bezier(0.3, 0, 0.35, 1) infinite;
+}
+
+.orb::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 45%;
+  height: 140px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, rgba(160, 215, 255, 0.4), transparent);
+}
+
+@keyframes beamTravel {
+  0% {
+    top: var(--start-top);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 1;
+  }
+  100% {
+    top: var(--end-top);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb {
+    animation: none;
+    opacity: 0;
+  }
+}

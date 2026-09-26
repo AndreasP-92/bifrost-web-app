@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BeamPulse } from "./beam-pulse";
 import { Embers } from "./embers";
 import { ChevronDownIcon, RuneButton, WindowsIcon } from "./ui";
 import styles from "./hero.module.css";
@@ -9,6 +10,7 @@ export function Hero() {
       <div className={styles.backdrop} />
       <div className={styles.water} aria-hidden="true" />
       <div className={styles.waterReflection} aria-hidden="true" />
+      <BeamPulse className={styles.embers} />
       <Embers className={styles.embers} />
       <div className={styles.veil} />
 

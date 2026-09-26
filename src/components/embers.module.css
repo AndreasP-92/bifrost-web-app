@@ -7,7 +7,6 @@
 
 .ember {
   position: absolute;
-  bottom: var(--start, -10px);
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
