@@ -1,0 +1,37 @@
+.layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: clamp(32px, 6vw, 64px);
+  align-items: center;
+}
+
+.plate {
+  padding: 10px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(0.95) contrast(1.05);
+}
+
+.copy {
+  max-width: 50ch;
+}
+
+.quote {
+  margin-top: 22px;
+  padding-left: 18px;
+  border-left: 2px solid var(--bronze-line);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--bronze-strong);
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

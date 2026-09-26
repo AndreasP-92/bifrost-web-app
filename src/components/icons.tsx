@@ -145,3 +145,35 @@ export function RuneKnot({ className }: { className?: string }) {
     </svg>
   );
 }
+
+/** Single forged corner bracket; caller rotates/positions the four copies. */
+export function FrameCorner({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 28 28" className={className} aria-hidden="true" focusable="false">
+      <path
+        d="M1 27 V7.5 Q1 1 7.5 1 H27"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.4"
+      />
+      <path d="M1 15 V9.5 Q1 6 4.5 6 H10" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.55" />
+      <circle cx="7.5" cy="7.5" r="1.7" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function OrnateDivider({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 120 16" className={className} aria-hidden="true" focusable="false">
+      <path d="M0 8 H46" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+      <path d="M74 8 H120" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+      <path
+        d="M60 1 L67 8 L60 15 L53 8 Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.2"
+      />
+      <circle cx="60" cy="8" r="1.6" fill="currentColor" />
+    </svg>
+  );
+}

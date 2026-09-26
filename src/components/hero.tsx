@@ -1,10 +1,13 @@
 import { BridgeMotif } from "./icons";
+import { Embers } from "./embers";
 import styles from "./hero.module.css";
 
 export function Hero() {
   return (
     <section id="top" className={styles.hero}>
+      <div className={styles.backdrop} />
       <BridgeMotif className={styles.bridge} />
+      <Embers className={styles.embers} />
       <div className={styles.veil} />
 
       <div className={`container ${styles.content}`}>
@@ -26,6 +29,10 @@ export function Hero() {
             How to Connect
           </a>
         </div>
+
+        <p className={styles.motto}>
+          <span aria-hidden="true">&mdash;</span> Fate chooses those who dare enter the Bifrost.
+        </p>
       </div>
     </section>
   );

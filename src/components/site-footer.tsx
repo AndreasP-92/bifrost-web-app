@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Logo } from "./logo";
 import styles from "./site-footer.module.css";
 
@@ -31,6 +32,20 @@ export function SiteFooter() {
             ))}
           </ul>
         </nav>
+
+        <div className={styles.medallionWrap}>
+          <div className={styles.medallion}>
+            <Image
+              src="/images/ravens.png"
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="72px"
+              className={styles.medallionImage}
+            />
+          </div>
+          <span className={styles.medallionCaption}>Huginn &amp; Muninn</span>
+        </div>
       </div>
 
       <div className={`container ${styles.bottom}`}>

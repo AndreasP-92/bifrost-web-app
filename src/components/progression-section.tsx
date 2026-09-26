@@ -1,3 +1,4 @@
+import { Frame } from "./frame";
 import styles from "./progression-section.module.css";
 
 const FEATURES = [
@@ -28,18 +29,18 @@ export function ProgressionSection() {
             </ul>
           </div>
 
-          <div className={styles.diagram} aria-hidden="true">
-            <div className={styles.games}>
+          <Frame className={styles.diagram}>
+            <div className={styles.games} aria-hidden="true">
               <span className={styles.gamePill}>Spil A</span>
               <span className={styles.gamePill}>Spil B</span>
               <span className={styles.gamePill}>Spil C</span>
             </div>
-            <div className={styles.connector} />
+            <div className={styles.connector} aria-hidden="true" />
             <div className={styles.profileNode}>
               <span className={styles.profileLabel}>Bifrost-profil</span>
               <span className={styles.profileSub}>Progression · Rewards · Identitet</span>
             </div>
-          </div>
+          </Frame>
         </div>
       </div>
     </section>

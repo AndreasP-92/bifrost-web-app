@@ -34,6 +34,7 @@
 }
 
 .headerCta {
+  --chamfer: 8px;
   padding: 10px 20px;
   font-size: 0.78rem;
 }
