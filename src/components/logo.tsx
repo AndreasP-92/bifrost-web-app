@@ -4,7 +4,7 @@ import styles from "./logo.module.css";
 
 export function Logo() {
   return (
-    <Link href="/" className={styles.logo} aria-label="Project Bifrost — til forsiden">
+    <Link href="/" className={styles.logo} aria-label="Project Bifrost — back to homepage">
       <Image
         src="/images/logo.png"
         alt=""

@@ -39,9 +39,14 @@
 .content {
   position: relative;
   z-index: 2;
-  max-width: 640px;
+  max-width: 760px;
   padding-left: clamp(24px, 6vw, 88px);
   padding-right: 24px;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4.6vw, 2.35rem);
+  line-height: 1.15;
 }
 
 .lead {

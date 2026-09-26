@@ -17,7 +17,9 @@ export function DownloadCta() {
         Download Bifrost
       </button>
       <p className={styles.comingSoon} role="status" aria-live="polite">
-        {announced ? "Bifrost er endnu ikke klar til download — men broen er ved at blive bygget. Kommer snart." : "Kommer snart"}
+        {announced
+          ? "Bifrost isn't ready for download yet — but the bridge is being built. Coming soon."
+          : "Coming soon"}
       </p>
     </div>
   );

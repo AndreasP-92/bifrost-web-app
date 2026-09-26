@@ -2,9 +2,9 @@ import { Frame } from "./frame";
 import styles from "./progression-section.module.css";
 
 const FEATURES = [
-  "Din progression følger dig fra spil til spil, ikke kun inde i ét enkelt spil.",
-  "Rewards, du optjener i et forbundet spil, samles på din Bifrost-profil.",
-  "Én identitet, ét fællesskab — uanset hvilket forbundet spil du er i gang med.",
+  "Your progression follows you from game to game, not just inside a single game.",
+  "Rewards you earn in a connected game are added to your Bifrost profile.",
+  "One identity, one community — no matter which connected game you're playing.",
 ];
 
 export function ProgressionSection() {
@@ -14,11 +14,11 @@ export function ProgressionSection() {
         <div className={styles.layout}>
           <div className={styles.copy}>
             <p className="eyebrow">Progression &amp; rewards</p>
-            <h2 className="h2">Progression, der følger dig</h2>
+            <h2 className="h2">Progression That Follows You</h2>
             <p className="body" style={{ marginTop: 16 }}>
-              Gennem de spil, der er forbundet til Bifrost, kan du optjene progression og rewards
-              til din fælles Bifrost-profil. Din indsats bliver en del af den samme rejse, uanset
-              hvilket forbundet spil du spiller lige nu.
+              Through the games connected to Bifrost, you can earn progression and rewards toward
+              your shared Bifrost profile. Your effort becomes part of the same journey, no matter
+              which connected game you&apos;re playing right now.
             </p>
             <ul className={styles.list}>
               {FEATURES.map((text) => (
@@ -31,14 +31,14 @@ export function ProgressionSection() {
 
           <Frame className={styles.diagram}>
             <div className={styles.games} aria-hidden="true">
-              <span className={styles.gamePill}>Spil A</span>
-              <span className={styles.gamePill}>Spil B</span>
-              <span className={styles.gamePill}>Spil C</span>
+              <span className={styles.gamePill}>Game A</span>
+              <span className={styles.gamePill}>Game B</span>
+              <span className={styles.gamePill}>Game C</span>
             </div>
             <div className={styles.connector} aria-hidden="true" />
             <div className={styles.profileNode}>
-              <span className={styles.profileLabel}>Bifrost-profil</span>
-              <span className={styles.profileSub}>Progression · Rewards · Identitet</span>
+              <span className={styles.profileLabel}>Bifrost Profile</span>
+              <span className={styles.profileSub}>Progression · Rewards · Identity</span>
             </div>
           </Frame>
         </div>

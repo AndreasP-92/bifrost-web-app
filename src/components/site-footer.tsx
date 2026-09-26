@@ -5,7 +5,7 @@ import styles from "./site-footer.module.css";
 const NAV_LINKS = [
   { href: "#bifrost", label: "Bifrost" },
   { href: "#progression", label: "Progression" },
-  { href: "#games", label: "Spil & API" },
+  { href: "#games", label: "Games & API" },
   { href: "#how-to-connect", label: "How to Connect" },
 ];
 
@@ -18,8 +18,8 @@ export function SiteFooter() {
         <div>
           <Logo />
           <p className={styles.tagline}>
-            I nordisk mytologi er Bifrost broen mellem verdenerne. Project Bifrost er broen mellem
-            spillere, spil og virksomheder.
+            In Norse mythology, Bifrost is the bridge between worlds. Project Bifrost is the
+            bridge between players, games and companies.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export function SiteFooter() {
       </div>
 
       <div className={`container ${styles.bottom}`}>
-        <span>© {year} Project Bifrost. Alle rettigheder forbeholdes.</span>
+        <span>© {year} Project Bifrost. All rights reserved.</span>
         <span>CVR 45801837</span>
       </div>
     </footer>

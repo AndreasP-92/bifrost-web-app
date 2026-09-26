@@ -20,14 +20,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Project Bifrost — Broen mellem spilverdener",
+  title: "Project Bifrost — The Bridge Between Gaming Worlds",
   description:
-    "Project Bifrost er ét samlet gaming-økosystem med én global gaming-profil, der forbinder spillere, spil og virksomheder.",
+    "Project Bifrost is one unified gaming ecosystem with one global gaming profile that connects players, games and companies.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="da" className={`${cinzel.variable} ${cinzelDecorative.variable} ${inter.variable}`}>
+    <html lang="en" className={`${cinzel.variable} ${cinzelDecorative.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );

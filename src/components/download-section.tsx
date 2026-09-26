@@ -7,12 +7,12 @@ export function DownloadSection() {
       <div className={styles.glow} />
       <div className={`container ${styles.inner}`}>
         <p className="eyebrow" style={{ justifyContent: "center" }}>
-          Vi bygger broen. Sammen.
+          We build the bridge. Together.
         </p>
         <h2 className="h2">Download Bifrost</h2>
         <p className="body" style={{ margin: "16px auto 0" }}>
-          Bifrost-appen er under udvikling. Følg med, og vær klar, når broen mellem dine spil
-          åbner.
+          The Bifrost app is under development. Follow along, and be ready when the bridge
+          between your games opens.
         </p>
         <DownloadCta />
       </div>

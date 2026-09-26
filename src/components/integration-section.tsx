@@ -10,32 +10,33 @@ export function IntegrationSection() {
             <div className={styles.row}>
               <GameIcon className={styles.rowIcon} />
               <div>
-                <p className={styles.rowTitle}>Eksisterende spil</p>
+                <p className={styles.rowTitle}>Existing games</p>
                 <p className={styles.rowText}>
-                  Spil, der allerede findes, kan forbindes til Bifrost-økosystemet og få adgang til
-                  den fælles profil og progression.
+                  Games that already exist can connect to the Bifrost ecosystem and gain access to
+                  the shared profile and progression.
                 </p>
               </div>
             </div>
             <div className={styles.row}>
               <ApiIcon className={styles.rowIcon} />
               <div>
-                <p className={styles.rowTitle}>Nye spil</p>
+                <p className={styles.rowTitle}>New games</p>
                 <p className={styles.rowText}>
-                  Nye spil kan bygges med Bifrost som en integreret del af spillet fra starten af.
+                  New games can be built with Bifrost as an integrated part of the game from the
+                  start.
                 </p>
               </div>
             </div>
           </div>
 
           <div className={styles.copy}>
-            <p className="eyebrow">Spil &amp; API</p>
-            <h2 className="h2">Forbundet gennem Bifrost API</h2>
+            <p className="eyebrow">Games &amp; API</p>
+            <h2 className="h2">Connected Through the Bifrost API</h2>
             <p className="body" style={{ marginTop: 16 }}>
-              Både eksisterende og nye spil kan integreres i Bifrost-økosystemet gennem Bifrost
-              API&apos;et. Det giver spiludviklere en overordnet vej til at forbinde deres spil til
-              den fælles profil, progression og fællesskab omkring Bifrost — uden at det går ud
-              over spillets egen identitet.
+              Both existing and new games can be integrated into the Bifrost ecosystem through the
+              Bifrost API. It gives game developers a high-level path to connect their game to the
+              shared profile, progression and community around Bifrost — without compromising the
+              game&apos;s own identity.
             </p>
           </div>
         </div>

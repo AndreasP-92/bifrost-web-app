@@ -1,5 +1,5 @@
-import { AboutSection } from "@/components/about-section";
 import { DownloadSection } from "@/components/download-section";
+import { FeatureCardsSection } from "@/components/feature-cards-section";
 import { Hero } from "@/components/hero";
 import { HowToConnectSection } from "@/components/how-to-connect-section";
 import { IntegrationSection } from "@/components/integration-section";
@@ -14,8 +14,8 @@ export default function Home() {
       <SiteHeader />
       <main>
         <Hero />
+        <FeatureCardsSection />
         <MythSection />
-        <AboutSection />
         <ProgressionSection />
         <IntegrationSection />
         <HowToConnectSection />

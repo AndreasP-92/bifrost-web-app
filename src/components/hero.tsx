@@ -11,19 +11,19 @@ export function Hero() {
       <div className={styles.veil} />
 
       <div className={styles.content}>
-        <p className="eyebrow">Én bro. Ét gaming-univers.</p>
-        <h1 className="h1">
+        <p className="eyebrow">One bridge. One gaming universe.</p>
+        <h1 className={`h1 ${styles.title}`}>
           Welcome to <span className="glow">Project Bifrost</span>
         </h1>
         <p className={`lead ${styles.lead}`}>
-          I nordisk mytologi er Bifrost broen, der forbinder verdenerne. Project Bifrost er vores
-          moderne tolkning — ét samlet gaming-økosystem, bygget omkring én global gaming-profil,
-          der forbinder spillere, spil og virksomheder.
+          In Norse mythology, Bifrost is the bridge that connects the worlds. Project Bifrost is
+          our modern take on that bridge — one unified gaming ecosystem, built around one global
+          gaming profile that connects players, games and companies.
         </p>
 
         <div className={styles.actions}>
           <a href="#bifrost" className="btn btnPrimary">
-            Udforsk Bifrost
+            Explore Bifrost
           </a>
           <a href="#how-to-connect" className="btn btnGhost">
             How to Connect

@@ -6,29 +6,29 @@ export function HowToConnectSection() {
       <div className="container">
         <div className="sectionHead">
           <p className="eyebrow">How to Connect</p>
-          <h2 className="h2">Sådan bliver du en del af Bifrost</h2>
+          <h2 className="h2">How to Become Part of Bifrost</h2>
           <p className="body" style={{ marginTop: 16 }}>
-            Bifrost er stadig under opbygning. Sådan hænger det sammen for både spillere og
-            spiludviklere, når broen åbner.
+            Bifrost is still being built. Here&apos;s how it comes together for both players and
+            game developers once the bridge opens.
           </p>
         </div>
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <span className={styles.badge}>Kommer snart</span>
-            <p className={styles.title}>For spillere</p>
+            <span className={styles.badge}>Coming soon</span>
+            <p className={styles.title}>For players</p>
             <p className={styles.text}>
-              Med Bifrost-appen får du én global gaming-profil, der følger dig på tværs af de
-              spil, der er forbundet til Bifrost — med progression og rewards samlet ét sted.
+              With the Bifrost app, you get one global gaming profile that follows you across the
+              games connected to Bifrost — with progression and rewards gathered in one place.
             </p>
           </div>
 
           <div className={styles.card}>
-            <span className={styles.badge}>Kommer snart</span>
-            <p className={styles.title}>For spiludviklere &amp; virksomheder</p>
+            <span className={styles.badge}>Coming soon</span>
+            <p className={styles.title}>For game developers &amp; companies</p>
             <p className={styles.text}>
-              Vil du forbinde dit spil til Bifrost-økosystemet gennem Bifrost API&apos;et? Vi
-              åbner op for partnerskaber, efterhånden som platformen udvikles.
+              Want to connect your game to the Bifrost ecosystem through the Bifrost API? We&apos;re
+              opening up for partnerships as the platform develops.
             </p>
           </div>
         </div>
