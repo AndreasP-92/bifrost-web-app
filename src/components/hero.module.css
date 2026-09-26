@@ -20,8 +20,8 @@
   inset: 0;
   pointer-events: none;
   mix-blend-mode: screen;
-  -webkit-mask-image: radial-gradient(38% 42% at 80% 84%, black 30%, transparent 75%);
-  mask-image: radial-gradient(38% 42% at 80% 84%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(33% 36% at 80% 84%, black 30%, transparent 75%);
+  mask-image: radial-gradient(33% 36% at 80% 84%, black 30%, transparent 75%);
 }
 
 .water::before,
@@ -41,14 +41,13 @@
 
 .water::after {
   background: repeating-linear-gradient(
-    82deg,
+    98deg,
     transparent 0%,
     rgba(120, 190, 255, 0.14) 1%,
     transparent 2.4%,
     transparent 11%
   );
-  animation-duration: 14s;
-  animation-direction: reverse;
+  animation-duration: 15s;
   opacity: 0.7;
 }
 
@@ -57,19 +56,16 @@
   inset: 0;
   pointer-events: none;
   mix-blend-mode: screen;
-  background: radial-gradient(9% 34% at 76% 80%, rgba(150, 210, 255, 0.55), transparent 72%);
+  background: radial-gradient(8% 29% at 76% 80%, rgba(150, 210, 255, 0.55), transparent 72%);
   animation: reflectionPulse 4s ease-in-out infinite;
 }
 
 @keyframes shimmer {
   0% {
-    transform: translate3d(-6%, 0, 0);
-  }
-  50% {
-    transform: translate3d(4%, 1%, 0);
+    transform: translate3d(9%, 0, 0);
   }
   100% {
-    transform: translate3d(-6%, 0, 0);
+    transform: translate3d(-9%, 0, 0);
   }
 }
 
